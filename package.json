@@ -8,9 +8,12 @@
     "url": "git://github.com/dominictarr/pull-zip.git"
   },
   "dependencies": {
-    "pull-stream": "~2.6"
+    "pull-core": "1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "pull-stream": "2",
+    "tape": "~1.0.2"
+  },
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
   },
