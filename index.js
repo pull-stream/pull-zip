@@ -1,7 +1,5 @@
 
-var pull = require('pull-stream')
-
-module.exports = pull.Source(function (streams) {
+module.exports = function (streams) {
   if(!Array.isArray(streams))
     streams = [].slice.call(arguments)
   var queue = []
@@ -30,4 +28,5 @@ module.exports = pull.Source(function (streams) {
       else cb(null, queue)
     }
   }
-})
+}
+
